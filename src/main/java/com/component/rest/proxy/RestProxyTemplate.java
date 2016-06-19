@@ -6,13 +6,14 @@ import java.net.Proxy;
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Component;
+import org.springframework.test.annotation.ProfileValueSourceConfiguration;
 import org.springframework.web.client.RestTemplate;
 
 @Component
-@PropertySource("classpath:config.properties") 
+//@PropertySource("classpath:config.properties") 
+@ProfileValueSourceConfiguration
 public final class RestProxyTemplate {
  
     private RestTemplate restTemplate;
